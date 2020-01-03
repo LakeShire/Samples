@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:background="@color/black">
+
+    <FrameLayout
+        android:id="@+id/popup_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_arrow_top_center"
+        tools:background="@color/white"
+        tools:layout_height="50dp"
+        tools:layout_width="300dp" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_left_top_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/popup_container"
+        android:layout_alignLeft="@id/popup_container"
+        android:rotation="180"
+        android:src="@drawable/triangle_edge"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_right_top_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/popup_container"
+        android:layout_alignRight="@id/popup_container"
+        android:rotation="90"
+        android:src="@drawable/triangle_edge"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_top_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="-4dp"
+        android:rotation="180"
+        android:src="@drawable/triangle_center"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_left_bottom_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/popup_container"
+        android:layout_alignLeft="@id/popup_container"
+        android:rotation="-90"
+        android:src="@drawable/triangle_edge"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_right_bottom_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/popup_container"
+        android:layout_alignRight="@id/popup_container"
+        android:src="@drawable/triangle_edge"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_bottom_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/popup_container"
+        android:layout_marginTop="-4dp"
+        android:src="@drawable/triangle_center"
+        android:visibility="invisible" />
+</RelativeLayout>

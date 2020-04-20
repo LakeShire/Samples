@@ -1,11 +1,11 @@
-package com.example.samples;
+package com.example.samples.view;
 
 import android.graphics.Color;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 
-import com.example.samples.view.ShadowView;
+import com.example.samples.R;
 
 import java.lang.ref.WeakReference;
 

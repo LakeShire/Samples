@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <Button
+        android:id="@+id/btn_dim"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="调暗系统UI"/>
+
+    <Button
+        android:id="@+id/btn_hide_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="隐藏状态栏"/>
+
+    <Button
+        android:id="@+id/btn_behind_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="在状态栏之后"/>
+</LinearLayout>

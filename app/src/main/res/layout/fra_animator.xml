@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_layout_transition"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="LayoutTransition"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e8e8e8" />
+
+    <TextView
+        android:id="@+id/tv_key_frame"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="KeyFrame"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e8e8e8" />
+
+    <TextView
+        android:id="@+id/tv_circle_reveal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="圆形揭露动画"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e8e8e8" />
+
+    <TextView
+        android:id="@+id/tv_scene"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="场景过度"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e8e8e8" />
+
+    <TextView
+        android:id="@+id/tv_fragment_transition"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Fragment转场"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e8e8e8" />
+
+    <TextView
+        android:id="@+id/tv_fragment_in_out"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Fragment进出场"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e8e8e8" />
+
+    <TextView
+        android:id="@+id/tv_view_anim"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="控件动画"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e8e8e8" />
+</LinearLayout>

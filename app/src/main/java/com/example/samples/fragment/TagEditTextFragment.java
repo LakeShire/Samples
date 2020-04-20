@@ -12,9 +12,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.samples.CustomTipsView;
 import com.example.samples.R;
-import com.example.samples.Tip;
 import com.example.samples.view.RichEditText;
 import com.example.samples.view.TagSpan;
 

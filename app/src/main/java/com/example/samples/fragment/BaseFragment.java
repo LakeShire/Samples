@@ -6,13 +6,13 @@ import com.example.samples.activity.MainActivity;
 
 public class BaseFragment extends Fragment {
 
-    public void startFragment(Class<? extends Fragment> clazz) {
+    public void startFragment(Class<? extends BaseFragment> clazz) {
         if (clazz == null) {
             return;
         }
         if (getActivity() instanceof MainActivity) {
             try {
-                Fragment f = clazz.newInstance();
+                BaseFragment f = clazz.newInstance();
                 ((MainActivity) getActivity()).startFragment(f);
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
@@ -22,7 +22,7 @@ public class BaseFragment extends Fragment {
         }
     }
 
-    public void startFragment(Fragment fragment) {
+    public void startFragment(BaseFragment fragment) {
         if (getActivity() instanceof MainActivity) {
             ((MainActivity) getActivity()).startFragment(fragment);
         }
@@ -32,5 +32,9 @@ public class BaseFragment extends Fragment {
         if (getActivity() instanceof MainActivity) {
             ((MainActivity) getActivity()).stopFragment();
         }
+    }
+
+    public boolean onBackPress() {
+        return false;
     }
 }

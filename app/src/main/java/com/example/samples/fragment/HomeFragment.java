@@ -10,6 +10,8 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.samples.fragment.animation.AnimatorFragment;
+import com.example.samples.fragment.canvas.LeafLoadingFragment;
 import com.example.samples.model.Entry;
 import com.example.samples.adapter.EntryAdapter;
 import com.example.samples.R;
@@ -30,6 +32,12 @@ public class HomeFragment extends BaseFragment {
         mListView = view.findViewById(R.id.listview);
         mList.add(new Entry("支持标签的EditText", TagEditTextFragment.class));
         mList.add(new Entry("自定义小提示", TipFragment.class));
+        mList.add(new Entry("动画", AnimatorFragment.class));
+        mList.add(new Entry("通知", NotifyFragment.class));
+        mList.add(new Entry("系统UI", SystemUiFragment.class));
+        mList.add(new Entry("落叶进度条", LeafLoadingFragment.class));
+        mList.add(new Entry("无限布局", InfiniteFragment.class));
+        mList.add(new Entry("输入面板", InputFragment.class));
         mAdapter = new EntryAdapter(getActivity(), mList, R.layout.item_entry);
         mListView.setAdapter(mAdapter);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

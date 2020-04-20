@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.samples.view.consecutivescroller.ConsecutiveScrollerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <WebView
+        android:id="@+id/web_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorAccent" />
+
+    <WebView
+        android:id="@+id/web_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</com.example.samples.view.consecutivescroller.ConsecutiveScrollerLayout>

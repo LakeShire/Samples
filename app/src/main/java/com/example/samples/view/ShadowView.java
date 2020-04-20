@@ -17,7 +17,7 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import com.example.samples.BaseUtil;
+import com.example.samples.util.BaseUtil;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -12,7 +12,11 @@ import androidx.fragment.app.FragmentManager;
 
 import com.example.samples.R;
 
+import java.util.Stack;
+
 public class ManageFragment extends Fragment {
+
+    private Stack<BaseFragment> mStack = new Stack<>();
 
     @Nullable
     @Override
@@ -20,16 +24,31 @@ public class ManageFragment extends Fragment {
         return inflater.inflate(R.layout.fra_manage, container, false);
     }
 
-    public void startFragment(Fragment fragment) {
+    public void startFragment(BaseFragment fragment) {
         FragmentManager fm = getChildFragmentManager();
-        fm.beginTransaction().add(R.id.fl_manage_container, fragment).addToBackStack(fragment.getClass().getSimpleName()).commitAllowingStateLoss();
+        fm.beginTransaction()
+                .add(R.id.fl_manage_container, fragment)
+//                .addToBackStack(fragment.getClass().getSimpleName())
+                .commitAllowingStateLoss();
+        mStack.add(fragment);
     }
 
     public boolean stopFragment() {
         FragmentManager fm = getChildFragmentManager();
-        if (fm.getBackStackEntryCount() > 0) {
-            fm.popBackStack();
-            return true;
+//        if (fm.getBackStackEntryCount() > 0) {
+//            fm.popBackStack();
+        if (!mStack.isEmpty()) {
+            BaseFragment fragment = mStack.peek();
+            boolean result = fragment.onBackPress();
+            if (result) {
+                return true;
+            } else {
+                fm.beginTransaction()
+                        .remove(fragment)
+                        .commitAllowingStateLoss();
+                mStack.pop();
+                return true;
+            }
         }
         return false;
     }

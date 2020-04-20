@@ -1,4 +1,4 @@
-package com.example.samples;
+package com.example.samples.view;
 
 import android.app.Activity;
 import android.content.Context;
@@ -20,20 +20,21 @@ import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleEventObserver;
 import androidx.lifecycle.LifecycleOwner;
 
-import com.example.samples.view.ShadowView;
+import com.example.samples.util.BaseUtil;
+import com.example.samples.R;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
-import static com.example.samples.Tip.ARROW_CENTER;
-import static com.example.samples.Tip.ARROW_LEFT;
-import static com.example.samples.Tip.ARROW_RIGHT;
-import static com.example.samples.Tip.BOTTOM;
-import static com.example.samples.Tip.STYLE_MASK;
-import static com.example.samples.Tip.STYLE_NORMAL;
-import static com.example.samples.Tip.STYLE_ONLY_MASK;
-import static com.example.samples.Tip.TOP;
+import static com.example.samples.view.Tip.ARROW_CENTER;
+import static com.example.samples.view.Tip.ARROW_LEFT;
+import static com.example.samples.view.Tip.ARROW_RIGHT;
+import static com.example.samples.view.Tip.BOTTOM;
+import static com.example.samples.view.Tip.STYLE_MASK;
+import static com.example.samples.view.Tip.STYLE_NORMAL;
+import static com.example.samples.view.Tip.STYLE_ONLY_MASK;
+import static com.example.samples.view.Tip.TOP;
 import static com.example.samples.view.ShadowView.MODE_FLAT;
 
 public class CustomTipsView {

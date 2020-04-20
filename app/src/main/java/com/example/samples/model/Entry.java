@@ -1,12 +1,12 @@
 package com.example.samples.model;
 
-import androidx.fragment.app.Fragment;
+import com.example.samples.fragment.BaseFragment;
 
 public class Entry {
     public String content;
-    public Class<? extends Fragment> clazz;
+    public Class<? extends BaseFragment> clazz;
 
-    public Entry(String content, Class<? extends Fragment> clazz) {
+    public Entry(String content, Class<? extends BaseFragment> clazz) {
         this.content = content;
         this.clazz = clazz;
     }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_f_animation_in"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="动画开启一个Fragment"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv_f_animation_out"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="动画退出一个Fragment"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/black" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

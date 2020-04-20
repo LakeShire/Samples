@@ -1,4 +1,4 @@
-package com.example.samples;
+package com.example.samples.util;
 
 import android.app.Activity;
 import android.content.Context;

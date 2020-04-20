@@ -1,6 +1,7 @@
 package com.example.samples.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +49,7 @@ abstract public class BaseAdapter<T, V extends ViewHolder> extends android.widge
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        Log.i("liuhan", "get: " + position);
         if (convertView == null) {
             convertView = LayoutInflater.from(mContext).inflate(mLayoutId, parent, false);
             Class<V> clazz = getViewHolderClass();

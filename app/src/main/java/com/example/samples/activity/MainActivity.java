@@ -1,11 +1,22 @@
 package com.example.samples.activity;
 
 import androidx.fragment.app.FragmentManager;
+
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.IBinder;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.samples.IPlay;
+import com.example.samples.MyApplication;
+import com.example.samples.PlayService;
+import com.example.samples.PlayStub;
 import com.example.samples.R;
+import com.example.samples.fragment.BaseFragment;
 import com.example.samples.fragment.HomeFragment;
 import com.example.samples.fragment.ManageFragment;
 
@@ -14,6 +25,7 @@ public class MainActivity extends BaseActivity {
 
     private static final String FRAGMENT_MANAGE = "fragment_manage";
     private static final String FRAGMENT_HOME = "fragment_home";
+    private IPlay iPlay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +43,23 @@ public class MainActivity extends BaseActivity {
             homeFragment = new HomeFragment();
             fm.beginTransaction().add(R.id.fl_home, homeFragment, FRAGMENT_HOME).commit();
         }
+
+        bindService(new Intent(this, PlayService.class), new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder service) {
+                iPlay = PlayStub.asInterface(service);
+                iPlay.play();
+                iPlay.pause();
+            }
+
+            @Override
+            public void onServiceDisconnected(ComponentName name) {
+
+            }
+        }, Context.BIND_AUTO_CREATE);
     }
 
-    public void startFragment(Fragment fragment) {
+    public void startFragment(BaseFragment fragment) {
         FragmentManager fm = getSupportFragmentManager();
         Fragment f = fm.findFragmentByTag(FRAGMENT_MANAGE);
         if (f instanceof ManageFragment) {

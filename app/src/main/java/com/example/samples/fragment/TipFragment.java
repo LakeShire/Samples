@@ -1,5 +1,6 @@
 package com.example.samples.fragment;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +12,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.samples.BaseUtil;
-import com.example.samples.CustomTipsView;
+import com.example.samples.util.BaseUtil;
+import com.example.samples.view.CustomTipsView;
 import com.example.samples.R;
-import com.example.samples.Tip;
-import com.example.samples.view.ShadowView;
+import com.example.samples.view.Tip;
 
 public class TipFragment extends BaseFragment {
 
@@ -64,15 +64,12 @@ public class TipFragment extends BaseFragment {
                                 Toast.makeText(getContext(), "消失", Toast.LENGTH_SHORT).show();
                             }
                         })
-                        .level(Tip.STYLE_ONLY_MASK)
+                        .level(Tip.STYLE_MASK)
                         .shape(Tip.SHAPE_ROUND_RECT)
                         .shadowRadius(BaseUtil.dp2px(getContext(), 8))
                         .marginX(BaseUtil.dp2px(getContext(), 16))
                         .focusClickable(false);
                 CustomTipsView tipsView = new CustomTipsView(getActivity(), TipFragment.this);
-                tipsView.addTip(tip);
-                tipsView.addTip(tip);
-                tipsView.addTip(tip);
                 tipsView.addTip(tip);
                 tipsView.showAllTips();
             }
@@ -94,7 +91,8 @@ public class TipFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 CustomTipsView tipsView = new CustomTipsView(getActivity(), TipFragment.this);
-                Tip tip = new Tip(btn3, "Hello").dir(Tip.BOTTOM).arrow(Tip.ARROW_LEFT);
+//                Tip tip = new Tip(btn3, "Hello").dir(Tip.BOTTOM).arrow(Tip.ARROW_LEFT);
+                Tip tip = new Tip(btn3, R.layout.popup_common_pic).dir(Tip.BOTTOM).arrow(Tip.ARROW_LEFT).backgroundColor(Color.parseColor("#f86442"));
                 tipsView.addTip(tip);
                 tipsView.showAllTips();
             }

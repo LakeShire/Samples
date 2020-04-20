@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_trans_target"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_below="@id/tv_trans"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_alpha"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:background="@color/white"
+        android:text="Alpha" />
+
+    <TextView
+        android:id="@+id/tv_alpha_target"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/tv_alpha"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_trans"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/tv_alpha_target"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="Trans" />
+
+    <TextView
+        android:id="@+id/tv_scale"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:layout_below="@id/tv_trans_target"
+        android:gravity="center"
+        android:text="Scale" />
+
+    <TextView
+        android:id="@+id/tv_scale_target"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/tv_scale"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:visibility="gone" />
+
+</RelativeLayout>
